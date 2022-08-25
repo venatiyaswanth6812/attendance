@@ -1,0 +1,87 @@
+#include <stdio.h>
+int main()
+{
+    int n,rno,t;
+    printf("ENTER THE STRENGHT OF CLASS:");
+    scanf("%d",&n);
+    int arr[n];
+    for(int i=1;i<=n;i++)
+    {
+        arr[i]=i;
+    }
+    printf("..........ABSENTIES LIST..........\n");
+    for(int i=1;i<=n;i++)
+    {
+        printf("%d\n",arr[i]);
+    }
+    do
+    {
+        
+        printf("ENTER THE ROLL NUMBER:");
+        scanf("%d",&rno);
+        printf("..........ABSENTIES LIST..........\n");
+        for(int i=1;i<=n;i++)
+        {
+            if(arr[i]==rno)
+            {
+                arr[i]=0;
+                continue;
+            }
+            else
+            {
+                continue;
+            }
+        }
+        for(int i=1;i<=n;i++)
+        {
+            if(arr[i]!=0)
+            {
+                printf("%d\n",arr[i]);
+            }
+        }
+        printf("do you want to enter for the next roll number(0-no/1-yes):");
+        scanf("%d",&t);
+        
+    }while(t);
+    printf("<<<<<<<<<<DATA OF ABSENTIES>>>>>>>>>>\n");
+    for(int i=1;i<=n;i++)
+    {
+        if(arr[i]!=0)
+        {
+            switch(arr[i])
+            {
+                case 1:printf("name:Pream sai\n");
+                       printf("roll number:1\n");
+                       printf("phone number:7793924353\n");
+                       printf("-------------------------------------\n");
+                       break;
+                case 2:printf("name:pilli bava\n");
+                       printf("roll number:2\n");
+                       printf("phone number:9966335588\n");
+                       printf("---------------------------------------\n");
+                       break;
+                case 3:printf("name:thammi reddy gari vamsi krishna reddy\n");
+                      printf("roll number:3\n");
+                      printf("phone number:7788994455\n");
+                      printf("-----------------------------------------\n");
+                      break;
+                case 4:printf("name:kittu\n");
+                       printf("roll number:4\n");
+                       printf("phone number:7711223344\n");
+                       printf("-----------------------------------------\n");
+                       break;
+                case 5:printf("name:vinoth\n");
+                       printf("roll number:5\n");
+                       printf("phone number:8822336655\n");
+                       printf("------------------------------------------\n");
+                       break;
+                default:printf("out of the data base");
+            }
+        }
+        else
+        {
+            continue;
+        }
+    }
+   
+}
